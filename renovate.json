@@ -3,25 +3,40 @@
     "config:base"
   ],
   "automerge": true,
+  "commitMessage": "{{semanticPrefix}}Update {{depName}} to {{newVersion}} 🌟",
+  "prTitle": "{{semanticPrefix}}{{#if isPin}}Pin{{else}}Update{{/if}} dependency {{depName}} to version {{newVersion}} 🌟",
   "major": {
     "automerge": false
   },
   "minor": {
     "automerge": false
   },
-  "rangeStrategy": "bump",
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 2,
+  "schedule": [
+    "after 2am and before 3am on saturday"
+  ],
+  "updateNotScheduled": false,
+  "timezone": "America/New_York",
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "separatePatchReleases": true,
   "separateMultipleMajor": true,
+  "masterIssue": true,
   "labels": [
     "type: dependencies",
     "renovate"
   ],
-  "commitMessageSuffix": "🌟",
-  "prHourlyLimit": 1,
-  "prConcurrentLimit": 1,
-  "updateNotScheduled": false,
-  "timezone": "America/New_York",
-  "schedule": [
-    "before 3am on the first day of the month"
-  ],
-  "dependencyDashboardApproval": true
+  "packageRules": [
+    {
+      "packageNames": ["cypress"],
+      "groupName": "cypress",
+      "schedule": "before 2am"
+    },
+    {
+      "packagePatterns": "^eslint",
+      "groupName": "eslint"
+    }
+  ]
 }
