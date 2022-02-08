@@ -16,16 +16,15 @@ jobs:
 
       - name: Create release branch
         run: git checkout -b release/${{ github.event.inputs.version }}
-      
+    name: changelog  
     steps:
-      # To use this repository's private action, you must check out the repository
       - name: Changelog
         id: changelog
         uses: actions/jira-changelog@v1
         with:
           jira_host: 'vultara.atlassian.net'
           jira_email: 'majid.rehman@vultara.com'
-          jira_token: '6JgeagCxKmCz2aBFdjcJ8074'
+          jira_token: '$JIRA_TOKEN'
           jira_base_url: 'https://vultara.atlassian.net'
           source_control_range_from: 'release-automation'
           source_control_range_to: 'main'
