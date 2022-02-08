@@ -9,10 +9,10 @@ jobs:
         run: echo ::set-env name=VERSION::1.1.1
       # To use this repository's private action, you must check out the repository
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Changelog
         id: changelog
-        uses: actions/jira-changelog@v1
+        uses: actions/jira-changelog@v2
         with:
           jira_host: 'vultara.atlassian.net'
           jira_email: 'majid.rehman@vultara.com'
