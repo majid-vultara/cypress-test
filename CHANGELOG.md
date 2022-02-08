@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.0.6] - 2022-02-08
+
 ## [5.0.5] - 2022-02-08
 
 ## [5.0.4] - 2022-02-08
@@ -66,7 +68,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Everything since the beginning!
 
-[Unreleased]: https://github.com/majid-vultara/cypress-test/compare/5.0.5...HEAD
+[Unreleased]: https://github.com/majid-vultara/cypress-test/compare/5.0.6...HEAD
+
+[5.0.6]: https://github.com/majid-vultara/cypress-test/compare/5.0.5...5.0.6
 
 [5.0.5]: https://github.com/majid-vultara/cypress-test/compare/5.0.4...5.0.5
 
