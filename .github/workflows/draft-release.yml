@@ -31,8 +31,6 @@ jobs:
         uses: thomaseizinger/keep-a-changelog-new-release@1.1.0
         with:
           version: ${{ github.event.inputs.version }}
-          body: ${{ steps.extract_release_notes.outputs.release_notes }}
-
 
       # In order to make a commit, we need to initialize a user.
       # You may choose to write something less generic here if you want, it doesn't matter functionality wise.
