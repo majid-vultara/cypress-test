@@ -13,29 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
+        with:
+          fetch-depth: 50
       - name: Create release branch
         run: git checkout -b release/${{ github.event.inputs.version }}
-    name: changelog  
-    steps:
-      - name: Changelog
-        id: changelog
-        uses: actions/jira-changelog@v1
+      
+      - uses: fregante/release-with-changelog@v3
         with:
-          jira_host: 'vultara.atlassian.net'
-          jira_email: 'majid.rehman@vultara.com'
-          jira_token: '$JIRA_TOKEN'
-          jira_base_url: 'https://vultara.atlassian.net'
-          source_control_range_from: 'release-automation'
-          source_control_range_to: 'main'
-      - name: Get the changelog message
-        run: echo "${{ steps.changelog.outputs.changelog_message }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update changelog
         uses: thomaseizinger/keep-a-changelog-new-release@1.1.0
         with:
           version: ${{ github.event.inputs.version }}
-          run: echo "${{ steps.changelog.outputs.changelog_message }}"
+
 
       # In order to make a commit, we need to initialize a user.
       # You may choose to write something less generic here if you want, it doesn't matter functionality wise.
@@ -63,7 +54,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           head: release/${{ github.event.inputs.version }}
-          base: main
+          base: master
           title: Release version ${{ github.event.inputs.version }}
           reviewers: ${{ github.actor }} # By default, we request a review from the person who triggered the workflow.
           # Write a nice message to the user.
