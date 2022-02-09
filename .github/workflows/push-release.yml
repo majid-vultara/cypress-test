@@ -28,7 +28,7 @@ jobs:
 
       - name: Check out code
         uses: actions/checkout@v2
-        
+
       - name: Changelog
         uses: scottbrenner/generate-changelog-action@master
         id: Changelog
@@ -45,7 +45,8 @@ jobs:
           target_commitish: ${{ github.event.pull_request.merge_commit_sha }}
           tag_name: ${{ env.RELEASE_VERSION }}
           name: ${{ env.RELEASE_VERSION }}
-          body: ${{ steps.extract_release_notes.outputs.release_notes }}
+          body: |
+             ${{ steps.Changelog.outputs.changelog }}
           draft: false
           prerelease: false
 
