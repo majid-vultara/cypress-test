@@ -28,6 +28,12 @@ jobs:
 
       - name: Check out code
         uses: actions/checkout@v2
+        
+      - name: Changelog
+        uses: scottbrenner/generate-changelog-action@master
+        id: Changelog
+        env:
+          REPO: ${{ github.repository }}
       - name: Extract release notes
         id: extract_release_notes
         uses: ffurrer2/extract-release-notes@v1.0.0
