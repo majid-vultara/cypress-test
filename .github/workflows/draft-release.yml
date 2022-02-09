@@ -13,24 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 50
+      
       - name: Create release branch
         run: git checkout -b release/${{ github.event.inputs.version }}
-
-      - uses: fregante/release-with-changelog@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          exclude: '^Meta'
-          commit-template: '- {title} ← {hash}'
-          template: |
-            ### Changelog
-
-            {commits}
-
-            {range}
-
-            ❤
         
       # - uses: fregante/release-with-changelog@v3
       #   with:
