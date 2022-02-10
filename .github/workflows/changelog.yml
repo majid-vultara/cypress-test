@@ -9,13 +9,13 @@ name: Changelog CI
 #     if: github.event.review.state == 'approved'
 #     runs-on: ubuntu-latest
 
-on:
-  pull_request:
-    types:
-      - opened
-jobs:
-  run_if:
-    if:  startsWith(github.head_ref, 'releases/')
+# on:
+#   pull_request:
+#     types:
+#       - opened
+# jobs:
+#   run_if:
+#     if:  startsWith(github.head_ref, 'releases/')
   # Optionally you can use `workflow_dispatch` to run Changelog CI Manually
   # workflow_dispatch:
   #   inputs:
@@ -26,7 +26,13 @@ jobs:
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
-
+on:
+  pull_request:
+    types: [review_requested]
+jobs:
+  specific_review_requested:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.requested_team.name == 'majid-vultara'}}
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v2
