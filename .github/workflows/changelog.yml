@@ -1,14 +1,21 @@
 name: Changelog CI
 
+# on:
+#   pull_request_review:
+#     types: [submitted]
+
+# jobs:
+#   approved:
+#     if: github.event.review.state == 'approved'
+#     runs-on: ubuntu-latest
+
 on:
-  pull_request_review:
-    types: [submitted]
-
+  pull_request:
+    types:
+      - opened
 jobs:
-  approved:
-    if: github.event.review.state == 'approved'
-    runs-on: ubuntu-latest
-
+  run_if:
+    if:  startsWith(github.head_ref, 'releases/')
   # Optionally you can use `workflow_dispatch` to run Changelog CI Manually
   # workflow_dispatch:
   #   inputs:
