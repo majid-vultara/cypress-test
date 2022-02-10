@@ -32,7 +32,7 @@ on:
 jobs:
   specific_review_requested:
     runs-on: ubuntu-latest
-    if: ${{ github.event.requested_team.name == 'majid-vultara'}}
+    if: ${{ github.event.requested_user.name == 'majid-vultara'}}
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v2
