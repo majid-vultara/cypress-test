@@ -25,18 +25,7 @@ jobs:
           BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
           VERSION=${BRANCH_NAME#hotfix/}
           echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
-
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Changelog
-        uses: scottbrenner/generate-changelog-action@master
-        id: Changelog
-        env:
-          REPO: ${{ github.repository }}
-      - name: Extract release notes
-        id: extract_release_notes
-        uses: ffurrer2/extract-release-notes@v1.0.0
+          
       - name: Create Release
         uses: thomaseizinger/create-release@1.0.0
         env:
