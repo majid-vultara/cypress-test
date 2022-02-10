@@ -25,7 +25,6 @@ jobs:
           BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
           VERSION=${BRANCH_NAME#hotfix/}
           echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
-          
       - name: Create Release
         uses: thomaseizinger/create-release@1.0.0
         env:
