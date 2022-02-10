@@ -5,7 +5,7 @@ on:
     branches:
       - main
     types:
-      - open
+      - opened
 
   # Optionally you can use `workflow_dispatch` to run Changelog CI Manually
   # workflow_dispatch:
