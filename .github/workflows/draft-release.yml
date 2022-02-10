@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create release branch
-        run: git checkout -b Release/${{ github.event.inputs.version }}
+        run: git checkout -b release/${{ github.event.inputs.version }}
         
       # - uses: fregante/release-with-changelog@v3
       #   with:
@@ -28,10 +28,10 @@ jobs:
 
       # In order to make a commit, we need to initialize a user.
       # You may choose to write something less generic here if you want, it doesn't matter functionality wise.
-      - name: Initialize mandatory git config
-        run: |
-          git config user.name "Majid Rehman"
-          git config user.email "majid.rehman@vultara.com"
+      # - name: Initialize mandatory git config
+      #   run: |
+      #     git config user.name "Majid Rehman"
+      #     git config user.email "majid.rehman@vultara.com"
       # This step will differ depending on your project setup
       # Fortunately, yarn has a built-in command for doing this!
       # - name: Bump version in package.json
@@ -51,7 +51,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          head: Release/${{ github.event.inputs.version }}
+          head: release/${{ github.event.inputs.version }}
           base: main
           title: Release ${{ github.event.inputs.version }}
           reviewers: ${{ github.actor }} # By default, we request a review from the person who triggered the workflow.
