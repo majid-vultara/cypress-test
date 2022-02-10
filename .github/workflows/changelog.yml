@@ -26,13 +26,26 @@ name: Changelog CI
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
+# on:
+#   pull_request:
+#     types: [review_requested]
+# jobs:
+#   specific_review_requested:
+#     runs-on: ubuntu-latest
+#     if: ${{ github.event.requested_user.name == 'majid-vultara'}}
+
 on:
   pull_request:
-    types: [review_requested]
+    branches:
+      - main
+    types:
+      - open
+
 jobs:
-  specific_review_requested:
+  release:
+    name: Publish new changelog
     runs-on: ubuntu-latest
-    if: ${{ github.event.requested_user.name == 'majid-vultara'}}
+    if: github.event.pull_request.merged == false
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v2
