@@ -1,13 +1,13 @@
 name: Changelog CI
 
-# on:
-#   pull_request_review:
-#     types: [submitted]
+on:
+  pull_request_review:
+    types: [submitted]
 
-# jobs:
-#   approved:
-#     if: github.event.review.state == 'approved'
-#     runs-on: ubuntu-latest
+jobs:
+  approved:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
 
 # on:
 #   pull_request:
@@ -34,24 +34,12 @@ name: Changelog CI
 #     runs-on: ubuntu-latest
 #     if: ${{ github.event.requested_user.name == 'majid-vultara'}}
 
-on:
-  pull_request:
-    branches:
-      - main
-    types:
-      - opened
-
-jobs:
-  release:
-    name: Publish new changelog
-    runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == false
     steps:
       # Checks-out your repository
       - uses: actions/checkout@v2
 
       - name: Run Changelog CI
-        uses: saadmk11/changelog-ci@v1.0.0
+        uses: majid-vultara/changelog-ci@v1.0.0
         with:
           # Optional, you can provide any name for your changelog file,
           # We currently support Markdown (.md) and reStructuredText (.rst) files
