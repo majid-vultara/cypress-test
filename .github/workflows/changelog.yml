@@ -2,14 +2,17 @@ name: Changelog CI
 
 on:
   pull_request:
-    types: [ opened ]
+    branches:
+      - main
+    types:
+      - open
 
   # Optionally you can use `workflow_dispatch` to run Changelog CI Manually
-  workflow_dispatch:
-    inputs:
-      release_version:
-        description: 'Set Release Version'
-        required: true
+  # workflow_dispatch:
+  #   inputs:
+  #     release_version:
+  #       description: 'Set Release Version'
+  #       required: true
 
 jobs:
   build:
