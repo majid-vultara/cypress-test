@@ -3,7 +3,7 @@ name: Changelog CI
 on:
   workflow_dispatch:
     inputs:
-      version:
+      release_version:
         description: 'The version you want to release.'
         required: true
 
