@@ -1,10 +1,13 @@
 name: Changelog CI
 
 on:
-  pull_request:
-    branches: 
-      - main
-    types: [opened, review_requested, open]
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  approved:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
 
   # Optionally you can use `workflow_dispatch` to run Changelog CI Manually
   # workflow_dispatch:
@@ -13,9 +16,9 @@ on:
   #       description: 'Set Release Version'
   #       required: true
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
     steps:
       # Checks-out your repository
@@ -32,7 +35,7 @@ jobs:
           # e.g: group your changelog by labels with custom titles,
           # different version prefix, pull request title and version number regex etc.
           # config file can be in JSON or YAML format.
-          # config_file: changelog-ci-config.json
+          config_file: changelog-ci-config.json
           # Optional, This will be used to configure git
           # defaults to `github-actions[bot]` if not provided.
           committer_username: 'Majid Rehman'
