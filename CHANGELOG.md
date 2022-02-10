@@ -1,3 +1,14 @@
+# Version: 8.0.1
+
+* [#37](https://github.com/majid-vultara/cypress-test/pull/37): Merge main into release-automation branch
+* [#38](https://github.com/majid-vultara/cypress-test/pull/38): Release automation
+* [#40](https://github.com/majid-vultara/cypress-test/pull/40): Release automation
+* [#39](https://github.com/majid-vultara/cypress-test/pull/39): updated workflow changelog yml
+* [#42](https://github.com/majid-vultara/cypress-test/pull/42): Release 6.0.8
+* [#43](https://github.com/majid-vultara/cypress-test/pull/43): Release v7.0.0
+* [#44](https://github.com/majid-vultara/cypress-test/pull/44): Release 8.0.0
+
+
 # Version: v7.0.0
 
 * [#37](https://github.com/majid-vultara/cypress-test/pull/37): Merge main into release-automation branch
