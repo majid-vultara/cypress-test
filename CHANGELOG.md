@@ -1,3 +1,16 @@
+# Version: 10.0.9
+
+* [#75](https://github.com/majid-vultara/cypress-test/pull/75): changed base image
+
+
+# Version: 10.0.7
+
+* [#57](https://github.com/majid-vultara/cypress-test/pull/57): updated branch for release
+* [#53](https://github.com/majid-vultara/cypress-test/pull/53): Merge main into release-automation branch
+* [#55](https://github.com/majid-vultara/cypress-test/pull/55): Release automation
+* [#58](https://github.com/majid-vultara/cypress-test/pull/58): Merge main into release-automation branch
+
+
 # Version: 8.0.1
 
 * [#37](https://github.com/majid-vultara/cypress-test/pull/37): Merge main into release-automation branch
