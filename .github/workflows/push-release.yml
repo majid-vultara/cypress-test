@@ -45,7 +45,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           head: main
-          base: release-automation
+          base: automation
           title: Merge main into release-automation branch
           body: |
             This PR merges the main branch back into release-automation.
