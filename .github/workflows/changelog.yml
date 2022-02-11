@@ -2,10 +2,24 @@ name: Changelog CI
 
 on:
   pull_request:
-    branches: 
-      - main
-    types: [opened, review_requested, open]
+    types: [opened]
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+# jobs:
+#   approved:
+#     if: github.event.review.state == 'approved'
+#     runs-on: ubuntu-latest
+
+# on:
+#   pull_request:
+#     types:
+#       - opened
+# jobs:
+#   run_if:
+#     if:  startsWith(github.head_ref, 'releases/')
   # Optionally you can use `workflow_dispatch` to run Changelog CI Manually
   # workflow_dispatch:
   #   inputs:
@@ -13,9 +27,16 @@ on:
   #       description: 'Set Release Version'
   #       required: true
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+# on:
+#   pull_request:
+#     types: [review_requested]
+# jobs:
+#   specific_review_requested:
+#     runs-on: ubuntu-latest
+#     if: ${{ github.event.requested_user.name == 'majid-vultara'}}
 
     steps:
       # Checks-out your repository
@@ -44,4 +65,4 @@ jobs:
           # such as environment variable or from output of another action
           release_version: ${{ github.event.inputs.release_version }}
           # Optional
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.REPO_SCOPED_TOKEN }}
