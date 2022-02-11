@@ -34,15 +34,15 @@ jobs:
           git config user.email "majid.rehman@vultara.com"
       # This step will differ depending on your project setup
       # Fortunately, yarn has a built-in command for doing this!
-      - name: Bump version in package.json
-        run: yarn version --new-version ${{ github.event.inputs.version }} --no-git-tag-version
+      # - name: Bump version in package.json
+      #   run: yarn version --new-version ${{ github.event.inputs.version }} --no-git-tag-version
 
-      - name: Commit manifest files
-        id: make-commit
-        run: |
-          git add package.json
-          git commit --message "Prepare release ${{ github.event.inputs.version }}"
-          echo "::set-output name=commit::$(git rev-parse HEAD)"
+      # - name: Commit manifest files
+      #   id: make-commit
+      #   run: |
+      #     git add package.json
+      #     git commit --message "Prepare release ${{ github.event.inputs.version }}"
+      #     echo "::set-output name=commit::$(git rev-parse HEAD)"
       - name: Push new branch
         run: git push origin release/${{ github.event.inputs.version }}
 
