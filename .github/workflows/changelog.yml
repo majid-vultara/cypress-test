@@ -65,4 +65,4 @@ jobs:
           # such as environment variable or from output of another action
           release_version: ${{ github.event.inputs.release_version }}
           # Optional
-          github_token: ${{ secrets.AUTH_TOKEN }}
+          github_token: ${{ secrets.REPO_SCOPED_TOKEN }}
