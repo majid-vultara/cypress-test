@@ -1,3 +1,8 @@
+# Version: 11.0.3
+
+* [#82](https://github.com/majid-vultara/cypress-test/pull/82): Merge main into release-automation branch
+
+
 # Version: 11.0.2
 
 * [#80](https://github.com/majid-vultara/cypress-test/pull/80): Merge main into release-automation branch

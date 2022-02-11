@@ -51,9 +51,9 @@ jobs:
         with:
           head: main
           base: automation
-          title: Merge main into release-automation branch
+          title: Merge main into automation branch
           body: |
-            This PR merges the main branch back into release-automation.
-            This happens to ensure that the updates that happend on the release branch, i.e. CHANGELOG and manifest updates are also present on the release-automation branch.
+            This PR merges the main branch back into automation.
+            This happens to ensure that the updates that happend on the release branch, i.e. CHANGELOG and manifest updates are also present on the rautomation branch.
       # if needed, you can checkout the latest main here, build artifacts and publish / deploy them somewhere
       # the create-release action has an output `upload_url` output that you can use to upload assets
