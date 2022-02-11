@@ -1,3 +1,8 @@
+# Version: 10.0.9
+
+* [#75](https://github.com/majid-vultara/cypress-test/pull/75): changed base image
+
+
 # Version: 10.0.7
 
 * [#57](https://github.com/majid-vultara/cypress-test/pull/57): updated branch for release
