@@ -40,6 +40,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           target_commitish: ${{ github.event.pull_request.merge_commit_sha }}
+          template: ${{CHANGELOG}}
           tag_name: ${{ env.RELEASE_VERSION }}
           name: ${{ env.RELEASE_VERSION }}
           body: ${{steps.github_release.outputs.changelog}}
