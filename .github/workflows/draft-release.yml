@@ -16,10 +16,6 @@ jobs:
 
       - name: Create release branch
         run: git checkout -b release/${{ github.event.inputs.version }}
-        
-      # - uses: fregante/release-with-changelog@v3
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Update changelog
       #   uses: thomaseizinger/keep-a-changelog-new-release@1.1.0
