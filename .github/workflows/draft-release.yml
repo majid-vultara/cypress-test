@@ -15,11 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create release branch
-        run: git checkout -b ${{ github.event.inputs.version }}
-        
-      # - uses: fregante/release-with-changelog@v3
-      #   with:
-      #     token: ${{ secrets.GITHUB_TOKEN }}
+        run: git checkout -b release/${{ github.event.inputs.version }}
 
       # - name: Update changelog
       #   uses: thomaseizinger/keep-a-changelog-new-release@1.1.0
@@ -33,18 +29,17 @@ jobs:
           git config user.name "Majid Rehman"
           git config user.email "majid.rehman@vultara.com"
       - name: Push new branch
-        run: git push origin ${{ github.event.inputs.version }}
+        run: git push origin release/${{ github.event.inputs.version }}
 
       - name: Create pull request
         uses: thomaseizinger/create-pull-request@1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_SCOPED_TOKEN }}
         with:
-          head: ${{ github.event.inputs.version }}
+          head: release/${{ github.event.inputs.version }}
           base: main
           title: Release ${{ github.event.inputs.version }}
           # reviewers: ${{ github.actor }} # By default, we request a review from the person who triggered the workflow.
-          # Write a nice message to the user.
           # We are claiming things here based on the `publish-new-release.yml` workflow.
           # You should obviously adopt it to say the truth depending on your release workflow :)
           body: |
