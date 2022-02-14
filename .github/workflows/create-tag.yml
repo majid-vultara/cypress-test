@@ -1,0 +1,32 @@
+name: "Publish new release"
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+jobs:
+  tagging:
+    name: Create Tag
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true # only merged pull requests must trigger this job
+    steps:
+      - name: Extract version from branch name (for release branches)
+        # if: startsWith(github.event.pull_request.head.ref, ${{ env.RELEASE_VERSION }})
+        run: |
+          BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
+          VERSION=${BRANCH_NAME}
+          echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
+      - uses: actions/checkout@v2
+
+      - name: Create release tag
+        run: git tag ${{ env.RELEASE_VERSION }}
+      
+      - name: Initialize mandatory git config
+        run: |
+          git config user.name "Majid Rehman"
+          git config user.email "majid.rehman@vultara.com"
+      - name: Push new branch
+        run: git push origin main ${{ env.RELEASE_VERSION }}
