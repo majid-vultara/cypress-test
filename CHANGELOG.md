@@ -1,3 +1,9 @@
+# Version: v12.1.5
+
+* [#93](https://github.com/majid-vultara/cypress-test/pull/93): tag workflow
+* [#94](https://github.com/majid-vultara/cypress-test/pull/94): Release v12.1.4
+
+
 
 # Version: v11.0.9
 
