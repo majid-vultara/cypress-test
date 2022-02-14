@@ -1,6 +1,10 @@
+
 # Version: v11.0.9
 
 * [#90](https://github.com/majid-vultara/cypress-test/pull/90): trying template
+# Version: 11.0.3
+
+* [#82](https://github.com/majid-vultara/cypress-test/pull/82): Merge main into release-automation branch
 
 
 # Version: 11.0.2
