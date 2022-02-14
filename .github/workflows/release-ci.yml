@@ -13,9 +13,9 @@ on:
 
 jobs:
   test:
-    name: Publish new release
+    name: test
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true # only merged pull requests must trigger this job
+    if: github.event_name  == 'pull_request'
 
 # jobs:     
 #   test:
@@ -106,7 +106,11 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@6034af24fba4e5a8e975aaa6056554efe4c794d0
         with:
+          target_commitish: ${{ github.event.pull_request.merge_commit_sha }}
+          tag_name: ${{ env.RELEASE_VERSION }}
+          name: ${{ env.RELEASE_VERSION }}
           body: ${{steps.github_release.outputs.changelog}}
-          prerelease: ${{ contains(github.ref, '-rc') || contains(github.ref, '-b') || contains(github.ref, '-a') }}
+          draft: false
+          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
