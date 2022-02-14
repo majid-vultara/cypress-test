@@ -1,14 +1,26 @@
 name: 'CI'
+# on:
+#   push:
+#     tags:
+#       - '*'
+#   pull_request:
 on:
-  push:
-    tags:
-      - '*'
   pull_request:
+    branches:
+      - main
+    types:
+      - closed
 
-jobs:     
-  test:
-    if: github.event_name  == 'pull_request'
+jobs:
+  release:
+    name: Publish new release
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true # only merged pull requests must trigger this job
+
+# jobs:     
+#   test:
+#     if: github.event_name  == 'pull_request'
+#     runs-on: ubuntu-latest
     steps:
       # the below actions use the local state of the action. please replace `./` with `mikepenz/release-changelog-builder-action@{latest-release}`
       # Showcases how to use the action without a prior checkout
