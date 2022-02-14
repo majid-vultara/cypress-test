@@ -5,25 +5,7 @@ on:
       - '*'
   pull_request:
 
-jobs:
-  build:
-    if: github.event_name  == 'pull_request'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-      - name: Install NPM
-        run: |
-          npm install
-      - name: Run NPM
-        run: |
-          npm run all
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+jobs:     
   test:
     if: github.event_name  == 'pull_request'
     runs-on: ubuntu-latest
@@ -35,7 +17,7 @@ jobs:
         id: without_checkout
         uses: mikepenz/release-changelog-builder-action@develop
         with:
-          toTag: "10.0.3"
+          toTag: "10.0.9"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -70,7 +52,7 @@ jobs:
           owner: "mikepenz"
           repo: "release-changelog-builder-action"
           fromTag: "10.0.1"
-          toTag: "10.0.3"
+          toTag: "10.0.9"
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Echo Complex Configuration Changelog
