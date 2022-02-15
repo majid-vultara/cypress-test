@@ -23,10 +23,10 @@ jobs:
         with:
           token: ${{ secrets.REPO_SCOPED_TOKEN }}
       
-      - name: Initialize mandatory git config
-        run: |
-          git config user.name "Majid Rehman"
-          git config user.email "majid.rehman@vultara.com"
+      # - name: Initialize mandatory git config
+      #   run: |
+      #     git config user.name "Majid Rehman"
+      #     git config user.email "majid.rehman@vultara.com"
       - name: Create release tag
         run: git tag ${{ env.RELEASE_VERSION }}
       - name: Push new branch
