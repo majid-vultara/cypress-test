@@ -20,6 +20,8 @@ jobs:
           VERSION=${BRANCH_NAME}
           echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
       - uses: actions/checkout@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.REPO_SCOPED_TOKEN }}
       
       - name: Initialize mandatory git config
         run: |
