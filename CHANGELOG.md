@@ -1,3 +1,9 @@
+# Version: 13.0.2
+
+* [#112](https://github.com/majid-vultara/cypress-test/pull/112): Release/automation
+* [#113](https://github.com/majid-vultara/cypress-test/pull/113): removed gitconfig
+
+
 
 # Version: v12.1.5
 
