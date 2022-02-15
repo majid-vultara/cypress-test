@@ -1,3 +1,8 @@
+# Version: 12.0.8
+
+* [#109](https://github.com/majid-vultara/cypress-test/pull/109): Release 12.0.5
+
+
 
 # Version: 12.0.3
 
