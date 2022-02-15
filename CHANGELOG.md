@@ -1,3 +1,11 @@
+# Version: 13.0.3
+
+* [#116](https://github.com/majid-vultara/cypress-test/pull/116): merging release into devops 
+* [#118](https://github.com/majid-vultara/cypress-test/pull/118): new fix pushed
+* [#115](https://github.com/majid-vultara/cypress-test/pull/115): removed commented lines from changelog workflow
+* [#117](https://github.com/majid-vultara/cypress-test/pull/117): removed commented lines
+
+
 
 # Version: 13.0.2
 
