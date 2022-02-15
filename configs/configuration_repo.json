@@ -17,8 +17,8 @@
             "labels": ["other"]
         },
         {
-            "title": "## 📦 Dependencies",
-            "labels": ["dependencies"]
+            "title": "## 📦 Improvements",
+            "labels": ["improvements"]
         }
     ],
     "max_pull_requests": 1000,
