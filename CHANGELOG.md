@@ -1,3 +1,8 @@
+# Version: 13.0.5
+
+* [#120](https://github.com/majid-vultara/cypress-test/pull/120): merge automation branch into main
+
+
 
 # Version: v12.1.5
 
