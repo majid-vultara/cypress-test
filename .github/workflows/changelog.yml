@@ -8,11 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-# jobs:
-#   approved:
-#     if: github.event.review.state == 'approved'
-#     runs-on: ubuntu-latest
-
 # on:
 #   pull_request:
 #     types:
