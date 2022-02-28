@@ -5,26 +5,7 @@ on:
       - '*'
   pull_request:
 
-jobs:     
-  # test:
-  #   if: github.event_name  == 'pull_request'
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # the below actions use the local state of the action. please replace `./` with `mikepenz/release-changelog-builder-action@{latest-release}`
-  #     # Showcases how to use the action without a prior checkout
-  #     - name: "Configuration without Checkout"
-  #       id: without_checkout
-  #       uses: mikepenz/release-changelog-builder-action@develop
-  #       with:
-  #         toTag: "10.0.9"
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-  #     - name: Echo Configuration without Checkout Changelog
-  #       env:
-  #         CHANGELOG: ${{ steps.without_checkout.outputs.changelog }}
-  #       run: echo "CHANGELOG"
-
+jobs: 
   #     - name: Checkout
   #       uses: actions/checkout@v2
   #       with:

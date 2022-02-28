@@ -1,3 +1,8 @@
+
+# Version: v12.3.6
+
+* [#125](https://github.com/majid-vultara/cypress-test/pull/125): removed commented line to test release
+
 # Version: v12.3.4
 
 * [#122](https://github.com/majid-vultara/cypress-test/pull/122): changed label name
@@ -14,6 +19,7 @@
 * [#118](https://github.com/majid-vultara/cypress-test/pull/118): new fix pushed
 * [#115](https://github.com/majid-vultara/cypress-test/pull/115): removed commented lines from changelog workflow
 * [#117](https://github.com/majid-vultara/cypress-test/pull/117): removed commented lines
+
 
 
 
