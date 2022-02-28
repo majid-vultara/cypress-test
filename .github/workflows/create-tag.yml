@@ -3,7 +3,7 @@ name: "Publish new Tag"
 on:
   pull_request:
     branches:
-      - main
+      - on-hold
     types:
       - closed
 
