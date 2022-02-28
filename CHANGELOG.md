@@ -1,3 +1,8 @@
+# Version: v12.3.6
+
+* [#125](https://github.com/majid-vultara/cypress-test/pull/125): removed commented line to test release
+
+
 
 # Version: 13.0.2
 
