@@ -1,3 +1,12 @@
+# Version: v12.3.9
+
+* [#128](https://github.com/majid-vultara/cypress-test/pull/128): Release v12.3.7
+* [#127](https://github.com/majid-vultara/cypress-test/pull/127): changed release process
+* [#129](https://github.com/majid-vultara/cypress-test/pull/129): update create branch flow
+* [#130](https://github.com/majid-vultara/cypress-test/pull/130): branch flow changed
+* [#131](https://github.com/majid-vultara/cypress-test/pull/131): update create branch flow
+
+
 
 # Version: 13.0.2
 
