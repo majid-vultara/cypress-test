@@ -1,3 +1,8 @@
+# Version: v12.3.7
+
+* [#127](https://github.com/majid-vultara/cypress-test/pull/127): changed release process
+
+
 
 # Version: 13.0.2
 
