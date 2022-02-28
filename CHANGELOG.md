@@ -1,3 +1,8 @@
+# Version: v12.4.5
+
+* [#143](https://github.com/majid-vultara/cypress-test/pull/143): second test
+
+
 
 # Version: v12.4.4
 

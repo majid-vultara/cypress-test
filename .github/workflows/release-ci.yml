@@ -6,18 +6,6 @@ on:
   pull_request:
 
 jobs: 
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #       with:
-  #         fetch-depth: 0
-
-  #       # Showcase the most minimal configuration possible
-  #     - name: "Minimal Configuration"
-  #       id: minimal_release
-  #       uses: ./
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
   #     - name: Echo Minimal Configuration Changelog
   #       env:
   #         CHANGELOG: ${{ steps.minimal_release.outputs.changelog }}
@@ -28,13 +16,6 @@ jobs:
   #       id: complex_release
   #       uses: ./
   #       with:
-  #         configuration: "configs/configuration_complex.json"
-  #         owner: "mikepenz"
-  #         repo: "release-changelog-builder-action"
-  #         fromTag: "10.0.1"
-  #         toTag: "10.0.9"
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-
   #     - name: Echo Complex Configuration Changelog
   #       env:
   #         CHANGELOG: ${{ steps.complex_release.outputs.changelog }}
