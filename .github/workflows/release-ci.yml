@@ -16,13 +16,6 @@ jobs:
   #       id: complex_release
   #       uses: ./
   #       with:
-  #         configuration: "configs/configuration_complex.json"
-  #         owner: "mikepenz"
-  #         repo: "release-changelog-builder-action"
-  #         fromTag: "10.0.1"
-  #         toTag: "10.0.9"
-  #         token: ${{ secrets.GITHUB_TOKEN }}
-
   #     - name: Echo Complex Configuration Changelog
   #       env:
   #         CHANGELOG: ${{ steps.complex_release.outputs.changelog }}
