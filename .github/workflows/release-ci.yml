@@ -11,15 +11,7 @@ jobs:
   #         CHANGELOG: ${{ steps.minimal_release.outputs.changelog }}
   #       run: echo "$CHANGELOG"
 
-  #       # Showcases a more complex configuration, providing a configuration, and specifically referencing owner, repo, from and to tag
-  #     - name: "Complex Configuration"
-  #       id: complex_release
-  #       uses: ./
-  #       with:
-  #     - name: Echo Complex Configuration Changelog
-  #       env:
-  #         CHANGELOG: ${{ steps.complex_release.outputs.changelog }}
-  #       run: echo "CHANGELOG"
+
 
   #       # Showcases the capability to generate the changelog for an external repository provided
   #     - name: "External Repo Configuration"
