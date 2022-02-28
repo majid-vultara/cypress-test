@@ -1,7 +1,52 @@
+
 # Version: v12.4.2
 
 * [#135](https://github.com/majid-vultara/cypress-test/pull/135): changed body to uncategorized PR
 * [#136](https://github.com/majid-vultara/cypress-test/pull/136): yml syntax error fix
+
+# Version: v12.4.1
+
+* [#133](https://github.com/majid-vultara/cypress-test/pull/133): commented changelog flow for release
+
+
+
+# Version: v12.3.9
+
+* [#128](https://github.com/majid-vultara/cypress-test/pull/128): Release v12.3.7
+* [#127](https://github.com/majid-vultara/cypress-test/pull/127): changed release process
+* [#129](https://github.com/majid-vultara/cypress-test/pull/129): update create branch flow
+* [#130](https://github.com/majid-vultara/cypress-test/pull/130): branch flow changed
+* [#131](https://github.com/majid-vultara/cypress-test/pull/131): update create branch flow
+
+# Version: v12.3.7
+
+* [#127](https://github.com/majid-vultara/cypress-test/pull/127): changed release process
+
+
+
+# Version: v12.3.6
+
+* [#125](https://github.com/majid-vultara/cypress-test/pull/125): removed commented line to test release
+
+# Version: v12.3.4
+
+* [#122](https://github.com/majid-vultara/cypress-test/pull/122): changed label name
+* [#123](https://github.com/majid-vultara/cypress-test/pull/123): commented label
+
+
+
+# Version: 13.0.5
+
+* [#120](https://github.com/majid-vultara/cypress-test/pull/120): merge automation branch into main
+# Version: 13.0.3
+
+* [#116](https://github.com/majid-vultara/cypress-test/pull/116): merging release into devops 
+* [#118](https://github.com/majid-vultara/cypress-test/pull/118): new fix pushed
+* [#115](https://github.com/majid-vultara/cypress-test/pull/115): removed commented lines from changelog workflow
+* [#117](https://github.com/majid-vultara/cypress-test/pull/117): removed commented lines
+
+
+
 
 
 
