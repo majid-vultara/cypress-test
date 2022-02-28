@@ -1,3 +1,9 @@
+# Version: v12.4.7
+
+* [#147](https://github.com/majid-vultara/cypress-test/pull/147): new process
+* [#148](https://github.com/majid-vultara/cypress-test/pull/148): branch strategy changed
+
+
 
 # Version: 13.0.2
 
