@@ -6,18 +6,6 @@ on:
   pull_request:
 
 jobs: 
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #       with:
-  #         fetch-depth: 0
-
-  #       # Showcase the most minimal configuration possible
-  #     - name: "Minimal Configuration"
-  #       id: minimal_release
-  #       uses: ./
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
   #     - name: Echo Minimal Configuration Changelog
   #       env:
   #         CHANGELOG: ${{ steps.minimal_release.outputs.changelog }}
