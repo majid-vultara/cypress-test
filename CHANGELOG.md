@@ -1,3 +1,9 @@
+# Version: v12.3.4
+
+* [#122](https://github.com/majid-vultara/cypress-test/pull/122): changed label name
+* [#123](https://github.com/majid-vultara/cypress-test/pull/123): commented label
+
+
 
 # Version: 13.0.2
 
