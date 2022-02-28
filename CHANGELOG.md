@@ -1,3 +1,8 @@
+
+# Version: v12.4.4
+
+* [#140](https://github.com/majid-vultara/cypress-test/pull/140): changed output to changelog
+
 # Version: v12.4.3
 
 * [#138](https://github.com/majid-vultara/cypress-test/pull/138): changed output to fromTag
@@ -49,6 +54,7 @@
 * [#118](https://github.com/majid-vultara/cypress-test/pull/118): new fix pushed
 * [#115](https://github.com/majid-vultara/cypress-test/pull/115): removed commented lines from changelog workflow
 * [#117](https://github.com/majid-vultara/cypress-test/pull/117): removed commented lines
+
 
 
 
