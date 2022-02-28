@@ -1,3 +1,8 @@
+# Version: v12.4.3
+
+* [#138](https://github.com/majid-vultara/cypress-test/pull/138): changed output to fromTag
+
+
 
 # Version: 13.0.2
 
