@@ -1,3 +1,8 @@
+# Version: v12.4.4
+
+* [#140](https://github.com/majid-vultara/cypress-test/pull/140): changed output to changelog
+
+
 
 # Version: 13.0.2
 
