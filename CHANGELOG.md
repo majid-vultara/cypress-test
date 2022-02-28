@@ -1,3 +1,9 @@
+
+# Version: v12.4.2
+
+* [#135](https://github.com/majid-vultara/cypress-test/pull/135): changed body to uncategorized PR
+* [#136](https://github.com/majid-vultara/cypress-test/pull/136): yml syntax error fix
+
 # Version: v12.4.1
 
 * [#133](https://github.com/majid-vultara/cypress-test/pull/133): commented changelog flow for release
@@ -38,6 +44,7 @@
 * [#118](https://github.com/majid-vultara/cypress-test/pull/118): new fix pushed
 * [#115](https://github.com/majid-vultara/cypress-test/pull/115): removed commented lines from changelog workflow
 * [#117](https://github.com/majid-vultara/cypress-test/pull/117): removed commented lines
+
 
 
 
