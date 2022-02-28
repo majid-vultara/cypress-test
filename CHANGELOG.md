@@ -1,3 +1,9 @@
+# Version: v12.4.2
+
+* [#135](https://github.com/majid-vultara/cypress-test/pull/135): changed body to uncategorized PR
+* [#136](https://github.com/majid-vultara/cypress-test/pull/136): yml syntax error fix
+
+
 
 # Version: 13.0.2
 
