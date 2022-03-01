@@ -26,8 +26,21 @@ jobs:
       # You may choose to write something less generic here if you want, it doesn't matter functionality wise.
       - name: Initialize mandatory git config
         run: |
-          git config user.name "Majid Rehman"
-          git config user.email "majid.rehman@vultara.com"
+          git config user.name "${{ github.actor }}"
+          git config user.email $git_email
+        env:
+          git_email: "${{ github.actor }}@vultara.com"
+
+      - name: Bump version in package.json
+        run: yarn version --new-version ${{ github.event.inputs.version }} --no-git-tag-version
+      
+      - name: Commit manifest files
+        id: make-commit
+        run: |
+          git add package.json
+          git commit --message "Prepare release ${{ github.event.inputs.version }}"
+          echo "::set-output name=commit::$(git rev-parse HEAD)"
+
       - name: Push new branch
         run: git push origin release/${{ github.event.inputs.version }}
 

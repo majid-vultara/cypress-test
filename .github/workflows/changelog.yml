@@ -2,7 +2,7 @@ name: Changelog CI
 
 on:
   pull_request:
-    types: [opened]
+    types: [on-hold]
 
 jobs:
   build:
