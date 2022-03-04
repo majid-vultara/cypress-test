@@ -50,7 +50,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.REPO_SCOPED_TOKEN }}
         with:
           head: release/${{ github.event.inputs.version }}
-          base: main
+          base: release/automation
           title: Release ${{ github.event.inputs.version }}
           # reviewers: ${{ github.actor }} # By default, we request a review from the person who triggered the workflow.
           # We are claiming things here based on the `publish-new-release.yml` workflow.
