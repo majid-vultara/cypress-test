@@ -43,8 +43,8 @@ jobs:
         node-version: '14'
         cache: 'npm'
 
-    # - name: Install npm packages
-    #   run: npm ci
+    - name: Install npm packages
+      run: npm ci
 
     - name: Setup Git
       run: |
