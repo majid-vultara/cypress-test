@@ -13,6 +13,11 @@ on:
         description: 'The version you want to release.'
         # Input has to be provided for the workflow to run
         required: true
+        type: choice
+        options: 
+        - patch
+        - minor
+        - major
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -28,10 +33,10 @@ jobs:
     # when we push changes, it will trigger the release workflow
     # run that runs on: tag. (Using the GitHub token would
     # not run the workflow to prevent infinite recursion.)
-    - name: Check out source
-      uses: actions/checkout@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.REPO_SCOPED_TOKEN }}
+
+    - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.REPO_SCOPED_TOKEN }}
     #   with:
     #     ssh-key: ${{ secrets.DEPLOY_KEY }}
 
@@ -49,13 +54,13 @@ jobs:
         git config user.name 'majid-vultara'
         git config user.email 'majid.rehman@vultara.com'
     - name: bump version
-      run: npm version ${{ github.event.inputs.version }} --no-git-tag-version
+      run: npm version ${{ github.event.inputs.version }}
 
     - name: Push latest version
-      run: git push origin main
+      run: git push origin main --follow-tags
 
-    - name: Create latest tag
-      run: git tag v${{ github.event.inputs.version }}
+    # - name: Create latest tag
+    #   run: git tag v${{ github.event.inputs.version }}
 
-    - name: Push latest tag
-      run: git push origin main v${{ github.event.inputs.version }}  
+    # - name: Push latest tag
+    #   run: git push origin main v${{ github.event.inputs.version }}  
