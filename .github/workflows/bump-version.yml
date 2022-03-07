@@ -32,8 +32,8 @@ jobs:
     # when we push changes, it will trigger the release workflow
     # run that runs on: tag. (Using the GitHub token would
     # not run the workflow to prevent infinite recursion.)
-    # - name: Check out source
-    #   uses: actions/checkout@v2
+    - name: Check out source
+      uses: actions/checkout@v2
     #   with:
     #     ssh-key: ${{ secrets.DEPLOY_KEY }}
 
