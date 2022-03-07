@@ -10,14 +10,10 @@ on:
     inputs:
       version:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Semver type of new version (major / minor / patch)'
+        description: 'The version you want to release.'
         # Input has to be provided for the workflow to run
         required: true
-        type: choice
-        options: 
-        - patch
-        - minor
-        - major
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -48,12 +44,18 @@ jobs:
     # - name: Install npm packages
     #   run: npm ci
 
-    - name: Setup Git
-      run: |
-        git config user.name 'majid-vultara'
-        git config user.email 'majid.rehman@vultara.com'
+    # - name: Setup Git
+    #   run: |
+    #     git config user.name 'majid-vultara'
+    #     git config user.email 'majid.rehman@vultara.com'
     - name: bump version
       run: npm version ${{ github.event.inputs.version }}
 
     - name: Push latest version
-      run: git push origin main --follow-tags
+      run: git push origin main
+
+    - name: Create latest tag
+      run: git tag ${{ github.event.inputs.version }}
+
+    - name: Push latest tag
+      run: git push origin main ${{ github.event.inputs.version }}  
