@@ -49,7 +49,7 @@ jobs:
         git config user.name 'majid-vultara'
         git config user.email 'majid.rehman@vultara.com'
     - name: bump version
-      run: npm version ${{ github.event.inputs.version }}
+      run: npm version ${{ github.event.inputs.version }} --no-git-tag-version
 
     - name: Push latest version
       run: git push origin main
