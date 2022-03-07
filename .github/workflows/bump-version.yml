@@ -48,7 +48,7 @@ jobs:
 
     - name: Setup Git
       run: |
-        git config user.name 'Majid Rehman'
+        git config user.name 'majid-vultara'
         git config user.email 'majid.rehman@vultara.com'
     - name: bump version
       run: npm version ${{ github.event.inputs.version }}
