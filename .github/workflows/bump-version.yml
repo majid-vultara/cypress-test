@@ -57,10 +57,4 @@ jobs:
       run: npm version ${{ github.event.inputs.version }}
 
     - name: Push latest version
-      run: git push origin main --follow-tags
-
-    # - name: Create latest tag
-    #   run: git tag v${{ github.event.inputs.version }}
-
-    # - name: Push latest tag
-    #   run: git push origin main v${{ github.event.inputs.version }}  
+      run: git push origin main --follow-tags 
