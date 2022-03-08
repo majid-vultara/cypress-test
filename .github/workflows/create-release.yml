@@ -42,6 +42,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             await github.request(`POST /repos/${{ github.repository }}/releases`, {
-              tag_name: "v${{ env.RELEASE_VERSION }}",
+              tag_name: "${{ github.ref }}",
+              release_name: "v${{ env.RELEASE_VERSION }}",
               generate_release_notes: true
             });
