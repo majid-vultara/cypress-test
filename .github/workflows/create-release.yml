@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: Extract version from branch name (for release branches)
         run: |
-          TAG="${{ github.ref }}"
+          TAG="${{ github.ref, 'refs/tags/' }}"
           VERSION=${TAG}
           echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
       - name: Create Release Notes
@@ -40,6 +40,6 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             await github.request(`POST /repos/${{ github.repository }}/releases`, {
-              tag_name: ${{ env.RELEASE_VERSION }},
+              tag_name: ${{ github.ref }},
               generate_release_notes: true
             });
