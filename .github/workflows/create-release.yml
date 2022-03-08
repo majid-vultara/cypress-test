@@ -43,6 +43,6 @@ jobs:
           script: |
             await github.request(`POST /repos/${{ github.repository }}/releases`, {
               tag_name: "${{ github.ref }}",
-              name: "v${{ env.RELEASE_VERSION }}",
+              name: "v${{ env.RELEASE_VERSION }} release",
               generate_release_notes: true
             });
