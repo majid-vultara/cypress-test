@@ -10,7 +10,7 @@ on:
     inputs:
       version:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'The version you want to release.'
+        description: 'Type of new version (major / minor / patch)'
         # Input has to be provided for the workflow to run
         required: true
         type: choice
